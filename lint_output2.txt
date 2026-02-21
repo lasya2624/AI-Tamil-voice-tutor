@@ -1,0 +1,68 @@
+﻿
+> tamil-voice-tutor@0.1.0 lint
+> eslint
+
+
+C:\Users\madhu\Desktop\Lasya\tamil-voice-tutor\src\app\page.tsx
+   32:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\madhu\Desktop\Lasya\tamil-voice-tutor\src\app\page.tsx:32:5
+  30 |
+  31 |   useEffect(() => {
+> 32 |     setMounted(true);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  33 |   }, []);
+  34 |
+  35 |   // Auto-scroll to bottom of chat                                                                                                                                                                                    react-hooks/set-state-in-effect
+   52:7   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\madhu\Desktop\Lasya\tamil-voice-tutor\src\app\page.tsx:52:7
+  50 |   useEffect(() => {
+  51 |     if (isListening) {
+> 52 |       setWasListening(true);
+     |       ^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  53 |     } else if (wasListening && transcript.trim()) {
+  54 |       // Trigger append manually since input might have been modified or cleared
+  55 |       append({ role: 'user', content: transcript });  react-hooks/set-state-in-effect
+  133:93  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      react/no-unescaped-entities
+  133:99  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      react/no-unescaped-entities
+
+C:\Users\madhu\Desktop\Lasya\tamil-voice-tutor\src\hooks\useSpeechRecognition.ts
+  23:77  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    @typescript-eslint/no-explicit-any
+  24:53  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    @typescript-eslint/no-explicit-any
+  25:73  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    @typescript-eslint/no-explicit-any
+  69:17  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\madhu\Desktop\Lasya\tamil-voice-tutor\src\hooks\useSpeechRecognition.ts:69:17
+  67 |                 };
+  68 |
+> 69 |                 setRecognition(recognitionInstance);
+     |                 ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  70 |             } else {
+  71 |                 console.warn('Speech recognition not supported in this browser.');
+  72 |             }  react-hooks/set-state-in-effect
+
+C:\Users\madhu\Desktop\Lasya\tamil-voice-tutor\src\hooks\useTextToSpeech.ts
+  37:13  error  'sanitizedText' is never reassigned. Use 'const' instead  prefer-const
+
+Γ£û 9 problems (9 errors, 0 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+
