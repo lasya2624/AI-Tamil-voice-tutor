@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🎙️ AI Conversational Language Voice Tutor
 
-## Getting Started
+An AI-powered voice agent that helps users learn and practice a new language through real spoken conversation.
+Instead of reading lessons or typing messages, users interact with the system entirely by speaking. The agent listens, understands imperfect speech, responds naturally, and provides corrections and learning guidance.
 
-First, run the development server:
+The goal of this project is to simulate a patient human conversation partner so that learners can improve fluency, confidence, and pronunciation through continuous interaction.
 
-```bash
+
+------------------------------------------------------------------------------------------
+
+✨ Features :
+
+🧠 Teaching Mode
+
+Introduces vocabulary and sentence structures
+Demonstrates pronunciation
+Gives speaking exercises
+Evaluates user speech
+Provides corrections with explanations
+
+🗣️ Practice Mode
+
+Role-play real-world situations (travel, hotel, shopping, directions)
+User speaks answers using voice
+Detects grammar and pronunciation mistakes
+Suggests corrected sentences
+
+💬 Conversation Mode
+
+Natural free conversation
+Understands mixed or broken language
+Maintains context
+Behaves like a friendly speaking partner
+Gently corrects mistakes without interrupting flow
+
+
+🏗️ How It Works
+
+The system follows a speech-AI-speech pipeline:
+User speaks into microphone
+Speech Recognition converts voice → text
+AI model processes conversation and learning logic
+System generates a respons
+Text-to-Speech converts response → natural voice
+AI speaks back to the user
+The user never needs to type or read during normal use.
+
+🧰 Tech Stack
+
+Frontend
+Next.js (React Framework)
+TypeScript
+Web Speech / Microphone APIs
+AI & Audio
+Whisper Speech Recognition (Speech → Text)
+Conversational AI API (Language reasoning & correction)
+Text-to-Speech Engine (Voice responses)
+Backend
+Node.js API routes
+Environment-based API configuration
+
+
+🚀 Getting Started
+
+1. Install dependencies
+        --->  npm install
+2. Add environment variables
+
+       ---> Create a .env.local file in the root folder:
+
+OPENAI_API_KEY=your_api_key_here
+
+3. Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
