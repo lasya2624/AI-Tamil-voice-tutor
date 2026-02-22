@@ -63,12 +63,14 @@ Environment-based API configuration
 🚀 Getting Started
 
 1. Install dependencies
+   
         --->  npm install
-2. Add environment variables
+3. Add environment variables
 
        ---> Create a .env.local file in the root folder:
 
-OPENAI_API_KEY=your_api_key_here
+        OPENAI_API_KEY=your_api_key_here
 
 3. Run the development server
-npm run dev
+   
+       npm run dev
